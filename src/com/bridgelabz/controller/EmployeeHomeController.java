@@ -28,7 +28,8 @@ public class EmployeeHomeController {
         while (true) {
             System.out.println("1. Insert Data in Employee Table.");
             System.out.println("2. Show All Records Of Employee Table.");
-            System.out.println("3. Exit From Employee Table.");
+            System.out.println("3. Delete Records From Employee Table.");
+            System.out.println("4. Exit From Employee Table.");
 
             int ch = scanner.nextInt();
 
@@ -50,11 +51,25 @@ public class EmployeeHomeController {
                     System.out.println("----------------------------------------------------------------------------");
                     break;
                 case 2:
-                    System.out.println("--------------------  Employee Payroll Database Records ----------------------");
+                    System.out.println("--------------------  Employee Table  Records ----------------------");
                     employeeService.showRecords();
                     System.out.println("===============================================================================");
                     break;
                 case 3:
+                case 5:
+                    System.out.println("-----------  Employee Table Before Delete Records ----------------");
+                    employeeService.showRecords();
+                    System.out.println("==============================================================================");
+                    System.out.println("--------  deleting new values  ---------");
+                    System.out.println("Enter id you want to delete: ");
+                    int idForDelete = scanner.nextInt();
+                    System.out.println("-------------  Employee Table After Delete Records ----------------");
+                    employeeService.deleteValues(idForDelete);
+                    employeeService.showRecords();
+                    System.out.println("===============================================================================");
+
+                    break;
+                case 4:
                     System.out.println("You Exit From Employee Details Application");
                     System.exit(0);
                 default:

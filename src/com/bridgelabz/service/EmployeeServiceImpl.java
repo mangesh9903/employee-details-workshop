@@ -48,7 +48,21 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         while (resultSet.next()) {
             System.out.println(" ID :- " + resultSet.getInt("id") + "     Name :- "
-                    + resultSet.getString("name") + "     DateOfJoining :- " + resultSet.getString("dateOfJoining"));
+                    + resultSet.getString("name") + "     DateOfJoining :- "
+                    + resultSet.getString("dateOfJoining"));
         }
+    }
+
+    /**
+     * Method :- Method for Delete Records From Employee Table.
+     *
+     * @param id passing id as a input
+     * @throws SQLException
+     */
+    @Override
+    public void deleteValues(int id) throws SQLException {
+        String sqlQuery = "DELETE from Employee where id='" + id + "'";
+        statement = connection.createStatement();
+        statement.executeUpdate(sqlQuery);
     }
 }

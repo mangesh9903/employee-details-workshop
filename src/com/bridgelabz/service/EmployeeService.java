@@ -17,4 +17,5 @@ public interface EmployeeService {
 
     void showRecords() throws SQLException;
 
+    void deleteValues(int id) throws SQLException;
 }
