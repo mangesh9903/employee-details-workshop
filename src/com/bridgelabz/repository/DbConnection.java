@@ -3,6 +3,7 @@ package com.bridgelabz.repository;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+
 /*********************************************************************
  * Purpose: Class for JDBC Connection.
  *
@@ -17,7 +18,8 @@ public class DbConnection {
     public static final String PASSWORD = "root";
     static Connection connection = null;
 
-    /** Method :- Method for JDBC Connection.
+    /**
+     * Method :- Method for JDBC Connection.
      *
      * @return returning connection Object.
      */

@@ -1,6 +1,8 @@
 package com.bridgelabz.model;
 
 import java.sql.Date;
+import java.time.LocalDate;
+
 /*********************************************************************
  * Purpose: POJO Class.
  *
@@ -12,12 +14,10 @@ import java.sql.Date;
 public class Employee {
     private int id;
     private String name;
-    private Date dateOfJoining;
+    private LocalDate dateOfJoining;
 
-    public Employee(int id, String name, Date dateOfJoining) {
-        this.id = id;
-        this.name = name;
-        this.dateOfJoining = dateOfJoining;
+    public Employee() {
+
     }
 
     public int getId() {
@@ -36,11 +36,11 @@ public class Employee {
         this.name = name;
     }
 
-    public Date getDateOfJoining() {
+    public LocalDate getDateOfJoining() {
         return dateOfJoining;
     }
 
-    public void setDateOfJoining(Date dateOfJoining) {
+    public void setDateOfJoining(LocalDate dateOfJoining) {
         this.dateOfJoining = dateOfJoining;
     }
 }
